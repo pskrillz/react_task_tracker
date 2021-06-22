@@ -1,9 +1,9 @@
 
 
-const Task = ({key, task}) => {
+const Task = ({task}) => {
     return (
         <div className="task">
-            <h3 key={key} task={task}>{task.text}</h3>
+            <h3>{task.text}</h3>
         </div>
     )
 }
