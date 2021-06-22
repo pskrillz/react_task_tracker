@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Task Tracker</h1>
-      <Header title="prop title"/>
+      <Header title="Custom title"/>
     </div>
   );
 }
