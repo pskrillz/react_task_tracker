@@ -11,7 +11,8 @@ function App() {
   return (
     <div className="container">
       <Header></Header>
-      <Button color="green" text="root click" onClick={onClick}></Button>
+      {/* No need for this test button
+       <Button color="green" text="root click" onClick={onClick}></Button> */}
       <Tasks/>
       
     </div>
