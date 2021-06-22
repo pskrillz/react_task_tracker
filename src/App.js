@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Components/Header';
 import Button from './Components/Button';
+import Tasks from './Components/Tasks'
 
 function App() {
   const onClick = () =>{
@@ -11,6 +12,7 @@ function App() {
     <div className="container">
       <Header></Header>
       <Button color="green" text="root click" onClick={onClick}></Button>
+      <Tasks/>
       
     </div>
   );
