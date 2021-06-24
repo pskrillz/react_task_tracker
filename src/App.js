@@ -33,7 +33,12 @@ function App() {
   return (
     <div className="container">
       <Header></Header>
-      <Tasks taskList={tasks} onDelete={deleteTask}/>
+      {tasks.length > 0 ?
+        
+        <Tasks taskList={tasks} onDelete={deleteTask}/>
+        : 
+        "Nothing to Show"
+      }
       
     </div>
   );
