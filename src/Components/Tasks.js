@@ -2,7 +2,7 @@ import Task from './Task'
 
 
 // this provides the content of the tasks
-const Tasks = ({taskList}) => {
+const Tasks = ({taskList, onDelete}) => {
    
 
 
@@ -10,7 +10,7 @@ const Tasks = ({taskList}) => {
     return (
         <div>
             {taskList.map( (task) => (
-            <Task key={task.id} task={task}/>
+            <Task key={task.id} task={task} onDelete={onDelete}/>
             ))}
         </div>
     )

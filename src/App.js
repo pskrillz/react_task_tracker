@@ -26,16 +26,14 @@ function App() {
     }
 ])
 
-  const onClick = () =>{
-    console.log("root click")
+  const deleteTask = (id) =>{
+    console.log("delete" + id)
   }
 
   return (
     <div className="container">
       <Header></Header>
-      {/* No need for this test button
-       <Button color="green" text="root click" onClick={onClick}></Button> */}
-      <Tasks taskList={tasks}/>
+      <Tasks taskList={tasks} onDelete={deleteTask}/>
       
     </div>
   );
