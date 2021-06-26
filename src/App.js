@@ -53,7 +53,10 @@ function App() {
   return (
     <div className="container">
       {/* cool way to create a one line toggle function */}
-      <Header onAdd={() => setShowAddTask(!showAddTask)}/>
+      <Header onAdd={() => setShowAddTask(!showAddTask)}
+      
+      showAdd={showAddTask}
+      />
       {/* && syntax binary shorthand if statement, 'if true then this' */}
       {showAddTask &&
        <AddTask onAdd={addTask}/>

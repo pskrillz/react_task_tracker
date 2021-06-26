@@ -2,7 +2,7 @@ import Button from "./Button"
 
 
 
-const Header = ({onAdd}) => {
+const Header = ({onAdd, showAdd}) => {
 
     // const onClick = () => {
     //     console.log("parent btn click")
@@ -14,7 +14,8 @@ const Header = ({onAdd}) => {
     return (
         <header className="header">
         <h1>Task Tracker</h1>
-       <Button color="blue" text="Add"
+        {/* come here with javascript and make the toggle dynamic styled */}
+       <Button color={showAdd ? "purple" : "blue"} text={showAdd ? "Close" : "Add"}
        onClick={onAdd}></Button>
 
 
