@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './Components/Header';
-import Button from './Components/Button';
 import Tasks from './Components/Tasks';
 import AddTask from './Components/AddTask';
 import { useState } from "react"

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 
 const Button = ({color, text, onClick}) => {
-    const onTestClick = (e) => {
-        console.log(e);
-    }
+    // const onTestClick = (e) => {
+    //     console.log(e);
+    // }
 
     return (
         <div>
