@@ -2,22 +2,20 @@ import Button from "./Button"
 
 
 
-const Header = () => {
-    const onClick = () => {
-        console.log("parent btn click")
-    }
+const Header = ({onAdd}) => {
 
-    const onClicker = () =>
-{
+    // const onClick = () => {
+    //     console.log("parent btn click")
+    // }
 
-}
+
 
 
     return (
         <header className="header">
         <h1>Task Tracker</h1>
-       <Button color="blue" text="click"
-       onClick={onClick}></Button>
+       <Button color="blue" text="Add"
+       onClick={onAdd}></Button>
 
 
        </header>

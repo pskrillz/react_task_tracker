@@ -6,6 +6,8 @@ import AddTask from './Components/AddTask';
 import { useState } from "react"
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
+
   const [tasks, setTasks] = useState([
     {
         id: 1, 
@@ -37,11 +39,25 @@ function App() {
     ))
   }
 
+  const addTask = (task) => {
+    // no backend, simple way to simulate id generation. 
+    const id = Math.floor(Math.random() * 1000)
+    const newTask = {id, ...task};
+
+    setTasks([...tasks, newTask])
+
+    console.log(id, task)
+  }
+
 
   return (
     <div className="container">
-      <Header></Header>
-      <AddTask></AddTask>
+      {/* cool way to create a one line toggle function */}
+      <Header onAdd={() => setShowAddTask(!showAddTask)}/>
+      {/* && syntax binary shorthand if statement, 'if true then this' */}
+      {showAddTask &&
+       <AddTask onAdd={addTask}/>
+      }
       {tasks.length > 0 ? 
         (
         <Tasks taskList={tasks} 
